@@ -3,4 +3,4 @@
 def main ():
     print ("Olá! Vamos controlar os gastos?")
 
-main()
+main() #alterei
