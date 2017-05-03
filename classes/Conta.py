@@ -1,5 +1,7 @@
+#!/usr/bin/env python
+
 class Conta(object):
-    def __init__(self,numero:int,valorMinimo:float = 0.0, valorDesejavel:float = 0,saldo:float=0.0):
+    def __init__(self,numero:int, valorMinimo:float = 0.0, valorDesejavel:float = 0, saldo:float=0.0):
         self.__numero = numero
         self.__valorMinimo = valorMinimo
         self.__valorDesejavel = valorDesejavel
