@@ -12,9 +12,9 @@ class Usuario:
 
     def __senha (self, senha:str):
         self.__senha = senha;
-    '''
+
     @property
-    def conta (self) -> list:
+    def conta (self):
         return self.__contas
 
     @conta.setter
@@ -23,7 +23,6 @@ class Usuario:
             self.__contas.append(conta)
         else:
             print("Tratar exceção")
-    '''
 
     def atualizaDados (self):
         pass
@@ -39,4 +38,21 @@ class Usuario:
         return self.__nome
     @nome.setter
     def nome (self, nome:str):
-        self.__nome = nome
+        if isinstance (nome, str):
+            self.__nome = nome
+        else:
+            print ("Erro")
+    
+    @property
+    def contato (self):
+        return (
+            self.__contato.email,
+            self.__contato.telefone
+            )
+
+    @contato.setter
+    def contato (self, contato:Contato):
+        if isinstance (contato, Contato):
+            self.__contato = contato
+        else:
+            print ("Erro")

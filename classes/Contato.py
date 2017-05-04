@@ -1,9 +1,18 @@
 #!/usr/bin/env python
 
+def testa_email (email:str):
+    for i in email:
+        if i == '@':
+            return True
+    return False
+
 class Contato:
     def __init__ (self, telefone:str, email:str):
         self.__telefone = telefone;
-        self.__email = email
+        if testa_email (email):
+            self.__email = email
+        else:
+            print ("Email inválido!")
 
     @property
     def email (self):
