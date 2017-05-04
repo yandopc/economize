@@ -13,11 +13,14 @@ class Usuario:
     def alteraSenha (self, senha:str):
         self.__senha = senha;
 
-    def cadastrarConta (conta:Conta):
+    def cadastrarConta (self, conta:Conta):
         self.__contas.append(conta)
 
-    def atualizaDados ():
+    def atualizaDados (self):
         pass
 
-    def transferirContas ():
+    def excluirContas (self, conta:Conta):
+        pass
+
+    def transferir (self):
         pass
