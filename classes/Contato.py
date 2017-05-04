@@ -5,5 +5,24 @@ class Contato:
         self.__telefone = telefone;
         self.__email = email
 
-    def alteraEmail (self, email:str):
-        self.__email = email
+    @property
+    def email (self):
+        return self.__email
+
+    @email.setter
+    def email (self, email:str):
+        if isinstance (email, str):
+            self.__email = email
+        else:
+            print ("Tratar erro")
+
+    @property
+    def telefone (self):
+        return self.__telefone
+
+    @telefone.setter
+    def telefone (self, telefone:str):
+        if isinstance (telefone, str):
+            self.__telefone = telefone
+        else:
+            print ("Tratar erro")

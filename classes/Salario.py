@@ -6,5 +6,13 @@ class Salario:
         self.__valor = valor
         self.__descricao = descr
 
-    def atualizaSalario (self, valor:float):
-        self.__valor = valor
+    @property
+    def salario (self):
+        return self.__valor
+
+    @salario.setter
+    def salario (self, salario:float):
+        if isinstance (salario, float):
+            self.__salario = salario
+        else:
+            print("Tratar erro")
