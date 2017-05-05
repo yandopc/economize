@@ -13,8 +13,8 @@ class Data:
         return self.__dia
     @dia.setter
     def dia (self,dia:int):
-        if(isinstance (dia,int)):
-            if(dia >0 and dia <=31):
+        if (isinstance (dia, int)):
+            if (dia > 0 and dia <= 31):
                 self.__dia = dia
             else:
                 raise ValueError
@@ -26,8 +26,8 @@ class Data:
         return self.__mes
     @dia.setter
     def mes (self,mes:int):
-        if isinstance (mes,int):
-            if(mes >0 and mes <=12):
+        if isinstance (mes, int):
+            if (mes > 0 and mes <= 12):
                 self.__mes = mes
             else:
                 raise ValueError
@@ -40,7 +40,7 @@ class Data:
 
     @ano.setter
     def ano (self,ano:int):
-        if isinstance (ano,int):
+        if isinstance (ano, int):
             if (ano > 0):
                 self.__ano = ano
             else:
@@ -71,7 +71,7 @@ class Data:
                     return False
                 else:
                     return True
-            elif(self.mes > other.mes):
+            elif (self.mes > other.mes):
                 return False
             else:
                 return True
