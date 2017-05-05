@@ -1,18 +1,14 @@
-#!/usr/bin/env python
+''#!/usr/bin/env python
 
 def testa_email (email:str):
-    for i in email:
-        if i == '@':
+    if '@' in email:
             return True
     return False
 
 class Contato:
     def __init__ (self, telefone:str, email:str):
-        self.__telefone = telefone;
-        if testa_email (email):
-            self.__email = email
-        else:
-            print ("Email inválido!")
+        self.telefone = telefone;
+        self.email = email
 
     @property
     def email (self):
@@ -20,7 +16,7 @@ class Contato:
 
     @email.setter
     def email (self, email:str):
-        if isinstance (email, str):
+        if isinstance (email, str) and testa_email(email):
             self.__email = email
         else:
             print ("Tratar erro")
