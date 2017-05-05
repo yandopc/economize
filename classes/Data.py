@@ -76,12 +76,13 @@ class Data:
             return False
         else:
             return True
-            
+
     def __eq__(self,other):
         if(self.dia == other.dia and self.mes == other.mes and self.ano == other.ano):
             return True
         else:
             return False
+            
     def __ne__(self,other):
         if(self.dia != other.dia or self.mes != other.mes or self.ano != other.ano):
             return True
