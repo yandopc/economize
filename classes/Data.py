@@ -20,11 +20,11 @@ class Data:
             raise AttributeError
 
     @property
-    def mes(self):
+    def mes (self):
         return self.__mes
     @dia.setter
-    def mes(self,mes:int):
-        if(isinstance (mes,int)):
+    def mes (self,mes:int):
+        if isinstance (mes,int):
             if(mes >0 and mes <=12):
                 self.__mes = mes
             else:
@@ -36,9 +36,9 @@ class Data:
     def ano(self):
         return self.__ano
     @dia.setter
-    def ano(self,ano:int):
-        if(isinstance (ano,int)):
-            if(ano >0):
+    def ano (self,ano:int):
+        if isinstance (ano,int):
+            if (ano > 0):
                 self.__ano = ano
             else:
                 raise ValueError
@@ -46,25 +46,25 @@ class Data:
             raise AttributeError
 
     def __gt__(self,other):
-        if(self.ano == other.ano):
-            if(self.mes == other.mes):
-                if(self.dia == other.dia or self.dia < other.dia):
+        if (self.ano == other.ano):
+            if (self.mes == other.mes):
+                if (self.dia == other.dia or self.dia < other.dia):
                     return False
                 else:
                     return True
-            elif(self.mes < other.mes):
+            elif (self.mes < other.mes):
                 return False
             else:
                 return True
-        elif(self.ano < other.ano):
+        elif (self.ano < other.ano):
             return False
         else:
             return True
 
     def __lt__(self,other):
-        if(self.ano == other.ano):
-            if(self.mes == other.mes):
-                if(self.dia == other.dia or self.dia > other.dia):
+        if (self.ano == other.ano):
+            if (self.mes == other.mes):
+                if (self.dia == other.dia or self.dia > other.dia):
                     return False
                 else:
                     return True
@@ -72,19 +72,26 @@ class Data:
                 return False
             else:
                 return True
-        elif(self.ano > other.ano):
+        elif (self.ano > other.ano):
             return False
         else:
             return True
 
     def __eq__(self,other):
-        if(self.dia == other.dia and self.mes == other.mes and self.ano == other.ano):
+        if (self.dia == other.dia and self.mes == other.mes and self.ano == other.ano):
             return True
         else:
             return False
-            
+
     def __ne__(self,other):
-        if(self.dia != other.dia or self.mes != other.mes or self.ano != other.ano):
+        if (self.dia != other.dia or self.mes != other.mes or self.ano != other.ano):
             return True
         else:
             return False
+
+    def data (self):
+        return (
+            self.__dia,
+            self.__mes,
+            self.__ano
+        )
