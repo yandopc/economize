@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-
+from datetime import *
+#from Cate
 class Conta:
     num_contas = 0
     def __init__(self, valor_minimo:float = 0.0, valor_desejavel:float = 0, saldo:float=0.0):
@@ -54,4 +55,8 @@ class Conta:
     else:
         raise AttributeError
 
-    
+    def fazer_balanco(self):
+        print("Saldo:", self.saldo)
+
+    def cadastrar_receita(self, descricao:str, valor:float, data:datetime):
+        data = data
