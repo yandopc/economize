@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 class Lancamento:
-    codigo = 0
+    #codigo = 0
     def __init__ (self, valor:float, descricao:str):
-        Lancamento.codigo += 1
+        #Lancamento.codigo += 1
         self.__codigo = Lancamento
         self.valor = valor
         self.descricao = descricao
@@ -29,7 +29,7 @@ class Lancamento:
 
     @descricao.setter
     def descricao (self, descricao:str):
-        if isinstance (descricao, str)
+        if isinstance (descricao, str):
             self.__descricao = descricao
         else:
             raise AttributeError
