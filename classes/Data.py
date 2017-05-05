@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from datetime import *
 #str(hj.day)+"/"+str(hj.month)+"/"+str(hj.year)
 class Data:
