@@ -12,7 +12,7 @@ class Categoria(object):
 	@nome.setter
 	def nome (self, nome):
 		if isinstance(nome, str):
-			self.__nome=nome
+			self.__nome = nome
 		else:
 			raise AttributeError
 
@@ -26,3 +26,6 @@ class Categoria(object):
 			self.__descricao=descricao
 		else:
 			raise AttributeError
+
+	def __str__ (self):
+		return (self.__nome, self.__descricao)
