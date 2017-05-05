@@ -33,9 +33,10 @@ class Data:
             raise AttributeError
 
     @property
-    def ano(self):
+    def ano (self):
         return self.__ano
-    @dia.setter
+
+    @ano.setter
     def ano (self,ano:int):
         if isinstance (ano,int):
             if (ano > 0):
@@ -89,9 +90,5 @@ class Data:
         else:
             return False
 
-    def data (self):
-        return (
-            self.__dia,
-            self.__mes,
-            self.__ano
-        )
+    def __str__ (self):
+        return str(self.dia)+"/"+str(self.mes)+ "/" + str(self.ano)

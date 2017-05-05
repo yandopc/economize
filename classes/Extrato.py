@@ -19,7 +19,7 @@ class Extrato:
         if isinstance (mes, str):
             self.__mes = mes
         else:
-            print ("Erro")
+            raise AttributeError
 
     def extrato (self):
         return (

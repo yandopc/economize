@@ -4,7 +4,7 @@ class Lancamento:
     #codigo = 0
     def __init__ (self, valor:float, descricao:str):
         #Lancamento.codigo += 1
-        self.__codigo = Lancamento
+        #self.__codigo = Lancamento
         self.valor = valor
         self.descricao = descricao
 

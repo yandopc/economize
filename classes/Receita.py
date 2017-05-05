@@ -4,13 +4,13 @@ from Lancamento import *
 from Data import *
 
 class Receita (Lancamento):
-    def __init__ (self, valor:float, descricao:str, data:Data):
-        Lancamento.__init__(valor, descricao)
+    def __init__ (self, valor:float, descricao:str, data:Data = Data()):
+        Lancamento.__init__(self, valor, descricao)
         self.__data = data
 
     @property
     def data (self):
-        return data
+        return self.__data
 
     @data.setter
     def data (self, data: Data):
