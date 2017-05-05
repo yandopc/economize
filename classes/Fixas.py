@@ -18,4 +18,6 @@ class Fixas (Despesas):
             self.__vencimento = vencimento
         else:
             raise AttributeError
-    
+
+    def atualiza_informacoes (self):
+        pass

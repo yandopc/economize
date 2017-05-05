@@ -13,7 +13,7 @@ class Data:
         return self.__dia
     @dia.setter
     def dia (self,dia:int):
-        if (isinstance (dia, int)):
+        if isinstance (dia, int):
             if (dia > 0 and dia <= 31):
                 self.__dia = dia
             else:
