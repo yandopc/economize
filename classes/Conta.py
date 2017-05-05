@@ -33,7 +33,7 @@ class Conta:
     @valor_desejavel.setter
     def valor_desejavel(self, valor_desejavel:float):
     if (isinstance (valor_desejavel,int) or isinstance (valor_desejavel,int)):
-        if(valor_desejavel > 0.0):
+        if (valor_desejavel > 0.0):
             self.__valor_desejavel = valor_desejavel
         else:
             raise ValueError
@@ -53,5 +53,3 @@ class Conta:
             raise ValueError
     else:
         raise AttributeError
-
-    

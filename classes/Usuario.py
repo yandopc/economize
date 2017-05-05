@@ -22,12 +22,12 @@ class Usuario:
         if isinstance (conta, Conta):
             self.__contas.append(conta)
         else:
-            print("Tratar exceção")
+            raise AttributeError
 
-    def atualizaDados (self):
+    def atualiza_dados (self):
         pass
 
-    def excluirContas (self, conta:Conta):
+    def excluir_contas (self, conta:Conta):
         pass
 
     def transferir (self):
@@ -41,8 +41,8 @@ class Usuario:
         if isinstance (nome, str):
             self.__nome = nome
         else:
-            print ("Erro")
-    
+            raise AttributeError
+
     @property
     def contato (self):
         return (
@@ -55,4 +55,4 @@ class Usuario:
         if isinstance (contato, Contato):
             self.__contato = contato
         else:
-            print ("Erro")
+            raise AttributeError

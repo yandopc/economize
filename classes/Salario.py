@@ -3,10 +3,7 @@
 class Salario:
     def __init__ (self, data:str, valor:float = 0, descr:str = 0):
         self.__data = data
-        if valor > 0:
-            self.__valor = valor
-        else:
-            print ("Salário inválido")
+        self.__valor = valor
         self.__descricao = descr
 
     @property
@@ -15,7 +12,10 @@ class Salario:
 
     @salario.setter
     def salario (self, salario:float):
-        if isinstance (salario, float):
-            self.__salario = salario
+        if salario > 0:
+            if isinstance (salario, float):
+                self.__salario = salario
+            else:
+                raise AttributeError
         else:
-            print ("Tratar erro")
+            raise ValueError

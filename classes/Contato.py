@@ -1,4 +1,4 @@
-''#!/usr/bin/env python
+#!/usr/bin/env python
 
 def testa_email (email:str):
     if '@' in email:
@@ -16,10 +16,13 @@ class Contato:
 
     @email.setter
     def email (self, email:str):
-        if isinstance (email, str) and testa_email(email):
-            self.__email = email
+        if isinstance (email, str):
+            if testa_email(email):
+                self.__email = email
+            else:
+                raise ValueError
         else:
-            print ("Tratar erro")
+            raise AttributeError
 
     @property
     def telefone (self):
@@ -30,4 +33,4 @@ class Contato:
         if isinstance (telefone, str):
             self.__telefone = telefone
         else:
-            print ("Tratar erro")
+            raise AttributeError
