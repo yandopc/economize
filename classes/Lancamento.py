@@ -1,9 +1,16 @@
 #!/usr/bin/env python
 
 class Lancamento:
+    codigo = 0
     def __init__ (self, valor:float, descricao:str):
+        Lancamento.codigo += 1
+        self.__codigo = Lancamento
         self.valor = valor
         self.descricao = descricao
+
+    @property
+    def codigo (self):
+        return self.__codigo
 
     @property
     def valor (self):
@@ -14,7 +21,7 @@ class Lancamento:
         if isinstance (valor, float):
             self.__valor = valor
         else:
-            print("Erro aqui")
+            raise AttributeError
 
     @property
     def descricao (self):
@@ -25,4 +32,4 @@ class Lancamento:
         if isinstance (descricao, str)
             self.__descricao = descricao
         else:
-            print("Erro aqui")
+            raise AttributeError
