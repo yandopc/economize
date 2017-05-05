@@ -4,8 +4,8 @@ class Categoria(object):
 	def __init__(self, nome:str, descricao:str=""):
 		self.nome = nome
 		self.descricao = descricao
-	@property
 
+	@property
 	def nome (self):
 		return self.__nome
 
