@@ -6,7 +6,7 @@ from Data import *
 class Receita (Lancamento):
     def __init__ (self, valor:float, descricao:str, data:Data = Data()):
         Lancamento.__init__(self, valor, descricao)
-        self.__data = data
+        self.data = data
 
     @property
     def data (self):
