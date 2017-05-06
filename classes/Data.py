@@ -11,6 +11,7 @@ class Data:
     @property
     def dia (self):
         return self.__dia
+        
     @dia.setter
     def dia (self, dia:int):
         if isinstance (dia, int):
@@ -24,6 +25,7 @@ class Data:
     @property
     def mes (self):
         return self.__mes
+
     @dia.setter
     def mes (self, mes:int):
         if isinstance (mes, int):
