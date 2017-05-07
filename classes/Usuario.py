@@ -9,10 +9,12 @@ class Usuario:
         self.__senha = senha
         self.contas = contas
         self.contato = contato
-"""
+
+    """
     def __senha (self, senha:str):
         self.__senha = senha;
-"""
+    """
+
     @property
     def contas (self):
         return self.__contas
@@ -23,13 +25,16 @@ class Usuario:
         else:
             raise AttributeError
 
-    """@contas.setter
+
+    """
+    @contas.setter
     def contas (self, conta:Conta):
         if isinstance (conta, Conta):
             self.__contas.append(conta)
         else:
             raise AttributeError
-"""
+    """
+
     def atualiza_dados (self):
         pass
 
@@ -65,19 +70,13 @@ class Usuario:
 
 	@staticmethod
 	def varifica_usuario(pessoa:Usuario, email:str, senha:str):
-		assert(pessoa.contato[0] == email,"Email invalido!") :
-		assert(pessoa.senha == senha,"Senha invalida!"):
+		assert pessoa.contato[0] == email,"Email invalido!"
+		assert pessoa.senha == senha,"Senha invalida!"
 		return True
 
 	@staticmethod
 	def permissao_sistema(email:str, senha:str, usuarios:list):
-		for usuario in usuarios:		
+		for usuario in usuarios:
 			if usuario.contato[0] == email and pessoa.senha == senha :
 				return usuario
 		return None
-
-
-
-
-
-
