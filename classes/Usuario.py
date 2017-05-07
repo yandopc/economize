@@ -4,7 +4,10 @@ from Conta import *
 from Contato import *
 
 class Usuario:
+    num_usuarios=0
     def __init__(self, nome:str, senha:str, contato:Contato, contas:list = []):
+        Usuario.num_usuarios += 1
+        self.__codigo = Usuario.num_usuarios
         self.nome = nome
         self.__senha = senha
         self.contas = contas

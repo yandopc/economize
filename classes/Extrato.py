@@ -5,9 +5,11 @@
 from Conta import *
 
 class Extrato:
+    num_extratos=0
     def __init__ (self, mes:str, codigo:int, conta:Conta):
+        Extrato.num_extratos+=1
         self.mes = mes
-        self.codigo = codigo
+        self.__codigo = Extrato.num_extratos
         self.conta = conta
 
     @property
@@ -21,6 +23,7 @@ class Extrato:
         else:
             raise AttributeError
 
+    """
 	@property
     def codigo (self):
         return self.__codigo
@@ -31,6 +34,7 @@ class Extrato:
             self.__codigo = codigo
         else:
             raise AttributeError
+    """
 
 	@property
     def conta (self):
