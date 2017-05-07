@@ -5,7 +5,7 @@ from Contato import *
 
 class Usuario:
     def __init__(self, nome:str, senha:str, contato:Contato, contas:list = []):
-        self.__nome = nome
+        self.nome = nome
         self.__senha = senha
         self.contas = contas
         self.contato = contato
@@ -65,13 +65,9 @@ class Usuario:
 
 	@staticmethod
 	def varifica_usuario(pessoa:Usuario, email:str, senha:str):
-		if pessoa.contato[0] == email :
-			if pessoa.senha == senha :
-				return True
-			else:
-				return NameError("Senha invalida!")
-		else:
-			return NameError("Email invalido!")
+		assert(pessoa.contato[0] == email,"Email invalido!") :
+		assert(pessoa.senha == senha,"Senha invalida!"):
+		return True
 
 	@staticmethod
 	def permissao_sistema(email:str, senha:str, usuarios:list):
