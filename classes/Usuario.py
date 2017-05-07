@@ -4,26 +4,32 @@ from Conta import *
 from Contato import *
 
 class Usuario:
-    def __init__(self, nome:str, senha:str = 0, contato:Contato = 0, contas:list = []):
+    def __init__(self, nome:str, senha:str, contato:Contato, contas:list = []):
         self.__nome = nome
         self.__senha = senha
-        self.__contas = contas
-        self.__contato = contato
-
+        self.contas = contas
+        self.contato = contato
+"""
     def __senha (self, senha:str):
         self.__senha = senha;
-
+"""
     @property
-    def conta (self):
+    def contas (self):
         return self.__contas
 
-    @conta.setter
-    def conta (self, conta:Conta):
-        if isinstance (conta, Conta):
+	def add_conta(self, conta:Conta):
+		if isinstance (conta, Conta):
             self.__contas.append(conta)
         else:
             raise AttributeError
 
+    """@contas.setter
+    def contas (self, conta:Conta):
+        if isinstance (conta, Conta):
+            self.__contas.append(conta)
+        else:
+            raise AttributeError
+"""
     def atualiza_dados (self):
         pass
 
@@ -56,3 +62,26 @@ class Usuario:
             self.__contato = contato
         else:
             raise AttributeError
+
+	@staticmethod
+	def varifica_usuario(pessoa:Usuario, email:str, senha:str):
+		if pessoa.contato[0] == email :
+			if pessoa.senha == senha :
+				return True
+			else:
+				return NameError("Senha invalida!")
+		else:
+			return NameError("Email invalido!")
+
+	@staticmethod
+	def permissao_sistema(email:str, senha:str, usuarios:list):
+		for usuario in usuarios:		
+			if usuario.contato[0] == email and pessoa.senha == senha :
+				return usuario
+		return None
+
+
+
+
+
+
